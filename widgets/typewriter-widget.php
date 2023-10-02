@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
+class Elementor_typewriter_Widget extends \Elementor\Widget_Base {
 
 	/**
 	 * Get widget name.
@@ -22,7 +22,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget name.
 	 */
 	public function get_name() {
-		return 'oembed';
+		return 'Typewriter Widget';
 	}
 
 	/**
@@ -35,7 +35,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget title.
 	 */
 	public function get_title() {
-		return esc_html__( 'oEmbed', 'elementor-oembed-widget' );
+		return esc_html__( 'Typewriter Widget', 'widget-main' );
 	}
 
 	/**
@@ -48,7 +48,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget icon.
 	 */
 	public function get_icon() {
-		return 'eicon-code';
+		return 'eicon-pencil';
 	}
 
 	/**
@@ -61,7 +61,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 	 * @return string Widget help URL.
 	 */
 	public function get_custom_help_url() {
-		return 'https://developers.elementor.com/docs/widgets/';
+		return 'https://codechampdev.com/';
 	}
 
 	/**
@@ -87,7 +87,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 	 * @return array Widget keywords.
 	 */
 	public function get_keywords() {
-		return [ 'oembed', 'url', 'link' ];
+		return [ 'type', 'heading', 'typewriter' ];
 	}
 
 	/**
@@ -103,7 +103,7 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 		$this->start_controls_section(
 			'content_section',
 			[
-				'label' => esc_html__( 'Content', 'elementor-oembed-widget' ),
+				'label' => esc_html__( 'Content', 'widget-main' ),
 				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -111,10 +111,10 @@ class Elementor_oEmbed_Widget extends \Elementor\Widget_Base {
 		$this->add_control(
 			'url',
 			[
-				'label' => esc_html__( 'URL to embed', 'elementor-oembed-widget' ),
+				'label' => esc_html__( 'URL to embed', 'widget-main' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'input_type' => 'url',
-				'placeholder' => esc_html__( 'https://your-link.com', 'elementor-oembed-widget' ),
+				'placeholder' => esc_html__( 'https://your-link.com', 'widget-main' ),
 			]
 		);
 
