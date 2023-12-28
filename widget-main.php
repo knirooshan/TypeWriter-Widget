@@ -30,4 +30,4 @@ function register_typewriter_widget($widgets_manager)
 
     $widgets_manager->register(new \Elementor_typewriter_Widget());
 }
-add_action('elementor/widgets/register', 'register_oembed_widget');
+add_action('elementor/widgets/register', 'register_typewriter_widget');
